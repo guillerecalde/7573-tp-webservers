@@ -1,9 +1,11 @@
 import express from 'express';
 import bodyParser from 'body-parser';
+import path from 'path';
 
 import fastResponse from './api_router/FastResponseRouter';
 import shortResponse from './api_router/ShortResponseRouter';
 import slowResponse from './api_router/SlowResponseRouter';
+import staticResponse from './api_router/StaticResponseRouter';
 
 // Init App.
 const app = express();
@@ -16,12 +18,16 @@ app.use(bodyParser.json());
 const port = 7573;
 app.set('port', process.env.PORT || port);
 
+// Static files directory.
+app.use(express.static(path.join(__dirname, 'static')));
+
 // API routes.
 var router = express.Router();
 
 router.use('/fast', fastResponse);
 router.use('/short', shortResponse);
 router.use('/slow', slowResponse);
+router.use('/static', staticResponse);
 
 app.use('/api', router);
 
