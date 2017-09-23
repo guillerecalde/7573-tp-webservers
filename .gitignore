@@ -1,3 +1,5 @@
 nodejs_webserver/node_modules
 flask_webserver/node_modules
 flask_webserver/resources/__pycache__
+flask_webserver/__pycache__
+flask_webserver/logs/
