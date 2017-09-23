@@ -6,6 +6,7 @@ import fastResponse from './api_router/FastResponseRouter';
 import shortResponse from './api_router/ShortResponseRouter';
 import slowResponse from './api_router/SlowResponseRouter';
 import staticResponse from './api_router/StaticResponseRouter';
+import highProcessingResponse from './api_router/HighProcessingResponseRouter';
 
 // Init App.
 const app = express();
@@ -28,6 +29,7 @@ router.use('/fast', fastResponse);
 router.use('/short', shortResponse);
 router.use('/slow', slowResponse);
 router.use('/static', staticResponse);
+router.use('/high-processing', highProcessingResponse);
 
 app.use('/api', router);
 
