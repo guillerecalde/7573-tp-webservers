@@ -1,0 +1,12 @@
+version: '2'
+services:
+  web:
+    build: .
+    container_name: 'flask_webserver'
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/code
+    environment:
+      FLASK_DEBUG: 1
+    command: python -u ./main.py
