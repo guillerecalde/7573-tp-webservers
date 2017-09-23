@@ -1,1 +1,3 @@
 nodejs_webserver/node_modules
+flask_webserver/node_modules
+flask_webserver/resources/__pycache__
