@@ -3,6 +3,7 @@ import bodyParser from 'body-parser';
 
 import fastResponse from './api_router/FastResponseRouter';
 import shortResponse from './api_router/ShortResponseRouter';
+import slowResponse from './api_router/SlowResponseRouter';
 
 // Init App.
 const app = express();
@@ -20,6 +21,7 @@ var router = express.Router();
 
 router.use('/fast', fastResponse);
 router.use('/short', shortResponse);
+router.use('/slow', slowResponse);
 
 app.use('/api', router);
 
