@@ -2,6 +2,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 
 import fastResponse from './api_router/FastResponseRouter';
+import shortResponse from './api_router/ShortResponseRouter';
 
 // Init App.
 const app = express();
@@ -18,6 +19,7 @@ app.set('port', process.env.PORT || port);
 var router = express.Router();
 
 router.use('/fast', fastResponse);
+router.use('/short', shortResponse);
 
 app.use('/api', router);
 
