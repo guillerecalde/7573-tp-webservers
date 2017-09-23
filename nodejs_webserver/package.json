@@ -1,0 +1,35 @@
+{
+  "name": "nodejs_webserver",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "7.2.3",
+    "babel-jest": "20.0.3",
+    "babel-loader": "7.1.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-runtime": "6.26.0",
+    "body-parser": "^1.17.1",
+    "browserify": "^13.0.0",
+    "express": "4.15.2",
+    "nodemon": "^1.12.1",
+    "promise": "8.0.1",
+    "url-loader": "0.5.9"
+  },
+  "scripts": {
+    "start": "nodemon index.js --exec babel-node --presets es2015,stage-2"
+  },
+  "description": "## Crear base de datos psql y usuario de la aplicacion.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "author": "Guillermo Recalde",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Doskapi/T2-Uber-ShareServer/issues"
+  },
+  "homepage": "https://github.com/Doskapi/T2-Uber-ShareServer#readme"
+}
