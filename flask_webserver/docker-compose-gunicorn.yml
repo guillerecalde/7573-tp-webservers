@@ -4,9 +4,9 @@ services:
     build: .
     container_name: 'gunicorn_webserver'
     ports:
-      - "5000:5000"
+      - "7573:7573"
     volumes:
       - .:/code
     environment:
       FLASK_DEBUG: 1
-    command: gunicorn -w 1 -t 90 -b 0.0.0.0:5000 main:app --log-config logging.conf
+    command: gunicorn -w 1 -t 90 -b 0.0.0.0:7573 main:app --log-config logging.conf
