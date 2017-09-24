@@ -1,0 +1,19 @@
+version: '2'
+services:
+  web:
+    build: .
+    container_name: 'nginx_webserver'
+    ports:
+      - "7573:7573"
+    volumes:
+      - .:/code
+    environment:
+      FLASK_DEBUG: 1
+    command: gunicorn -w 1 -t 90 -b 0.0.0.0:7573 main:app --log-config logging.conf
+
+  nginx:
+    build: ./nginx
+    ports:
+      - "80:80"
+    links:
+      - web
